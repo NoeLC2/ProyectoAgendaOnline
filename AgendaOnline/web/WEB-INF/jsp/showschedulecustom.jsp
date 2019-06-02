@@ -1,8 +1,13 @@
-<%@page pageEncoding="UTF-8" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="main.Main"%>
+<%@ page import="java.net.URLDecoder"%>
+
 <%
+        //request.setCharacterEncoding("UTF-8");
         String monthYear = request.getParameter("monthyear");
         String petitions = request.getParameter("petitions");
+        petitions = new String(petitions.getBytes("ISO8859_1"), "UTF8");
+        URLDecoder.decode(petitions, "UTF-8");
         String bool = request.getParameter("bool");
         String language = request.getParameter("language");
         String languageIn = request.getParameter("languagein");

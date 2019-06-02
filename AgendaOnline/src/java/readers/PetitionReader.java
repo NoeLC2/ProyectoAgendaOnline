@@ -28,7 +28,7 @@ public interface PetitionReader {
         //File file = new File( "Petitions/" + petitionFile + ".txt");
         if (petitionFile.equals("custom.txt")) {
             is = new FileInputStream("custom.txt");
-            isr = new InputStreamReader(is, "UTF-8");
+            isr = new InputStreamReader(is);
         } else {
             is = ConfigReader.class.getClassLoader()
                     .getResourceAsStream("Petitions/" + petitionFile + ".txt");

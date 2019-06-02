@@ -4,6 +4,7 @@
 <head>
     <title>Lector Universal de Agendas</title>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -47,13 +48,14 @@
         <h3>Muestra un fichero existente</h3>
         <form action="mostraragenda" method="post">
             Fichero de peticiones: <select name="petitions" required>
+                <option value="cine">cine (Apr-Jul 2019)</option>
                 <option value="Comedor2019">Comedor2019</option>
-                <option value="FisicaHoraris">FisicaHoraris</option>
+                <option value="FisicaHoraris">FisicaHoraris (Feb-May 2019)</option>
                 <option value="peticions2019">peticions2019</option>
-                <option value="peticionsOrig">peticionsOrig</option>
+                <option value="peticionsOrig">peticionsOrig (2008)</option>
                 <option value="custom.txt">custom!</option>
             </select> <br>
-            Año y mes: <input type="month" name="monthyear" value="2019-05" required> <br>
+            Año y mes: <input type="month" name="monthyear" value="2019-06" required> <br>
             Idioma de salida: <select name="language" required>
                 <option value="ESP">Español</option>
                 <option value="CAT">Catalán</option>
@@ -61,7 +63,7 @@
             </select> <br>
             Permitir colisiones de cerrado? <input type="checkbox" name="bool" checked> <br>
             Franja horaria: De <input type="number" name="startHour" value="8" min="0" max="24" required> a <input
-                type="number" name="endHour" value="20" min="0" max="24" required> <br><br>
+                type="number" name="endHour" value="21" min="0" max="24" required> <br><br>
             <input type="submit" value="MOSTRAR">
         </form>
     </div>
@@ -71,7 +73,7 @@
         <form action="mostraragendacustom" method="post">
             (por favor, usa el formato correcto o se producirá un error) <br>
             <textarea name="petitions" required></textarea><br>
-            Año y mes: <input type="month" name="monthyear" value="2019-05" required> <br>
+            Año y mes: <input type="month" name="monthyear" value="2019-06" required> <br>
             Idioma de entrada: <select name="languagein" required>
                     <option value="ESP">Español</option>
                     <option value="CAT">Catalán</option>
@@ -84,7 +86,7 @@
             </select> <br>
             Permitir colisiones de cerrado? <input type="checkbox" name="bool" checked> <br>
             Franja horaria: De <input type="number" name="startHour" value="8" min="0" max="24" required> a <input
-                type="number" name="endHour" value="20" min="0" max="24" required> <br><br>
+                type="number" name="endHour" value="21" min="0" max="24" required> <br><br>
             <input type="submit" value="MOSTRAR">
         </form>
     </div>
