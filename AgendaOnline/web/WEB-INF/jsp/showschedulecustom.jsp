@@ -15,6 +15,9 @@
         String endHour = request.getParameter("endHour");
         
         String output = Main.createFile(monthYear, petitions, language, languageIn, bool, startHour, endHour);
+        if (output.isEmpty()){
+            output = "Durante el mes seleccionado no hay ninguna petición, así que no hay agenda que mostrar.";
+        }
         
         /*String output = Main.main(monthYear,petitions,language,bool, startHour, endHour);    
         if (output.isEmpty()){
