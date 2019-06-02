@@ -4,3 +4,5 @@ Este proyecto se basa en el [Proyecto Agenda,](https://github.com/NoeLC2/Proyect
 
 Esta es la página principal. Al enviar uno de los formularios iremos a la página de la agenda.
 ![index.html](https://i.imgur.com/fMW64Jg.png)
+
+Al contrario que la versión local, esta sí tiene interacción con el usuario y permite añadir peticiones personalizadas. Sin embargo no se genera un log de errores (sería posible pero da más trabajo), pero sí se comprueban colisiones.
