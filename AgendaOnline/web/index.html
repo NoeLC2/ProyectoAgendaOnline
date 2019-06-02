@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lector Universal de Agendas</title>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        input[type=number] {
+            width: 2em;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        div {
+            background-color: rgb(224, 243, 247);
+            margin-left: 25vw;
+            margin-right: 25vw;
+            padding: 10px;
+        }
+
+        * {
+            font-family: 'Didact Gothic', sans-serif;
+        }
+
+        h1 {
+            font-size: 3em;
+            ;
+        }
+
+        textarea {
+            height: 10em;
+            width: 80%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body bgcolor="MintCream">
+    <h1>Lector Universal de Agendas</h1>
+    <div>
+        <h3>Muestra un fichero existente</h3>
+        <form action="mostraragenda" method="post">
+            Fichero de peticiones: <select name="petitions" required>
+                <option value="Comedor2019">Comedor2019</option>
+                <option value="FisicaHoraris">FisicaHoraris</option>
+                <option value="peticions2019">peticions2019</option>
+                <option value="peticionsOrig">peticionsOrig</option>
+                <option value="custom.txt">custom!</option>
+            </select> <br>
+            Año y mes: <input type="month" name="monthyear" value="2019-05" required> <br>
+            Idioma de salida: <select name="language" required>
+                <option value="ESP">Español</option>
+                <option value="CAT">Catalán</option>
+                <option value="ENG">Inglés</option>
+            </select> <br>
+            Permitir colisiones de cerrado? <input type="checkbox" name="bool" checked> <br>
+            Franja horaria: De <input type="number" name="startHour" value="8" min="0" max="24" required> a <input
+                type="number" name="endHour" value="20" min="0" max="24" required> <br><br>
+            <input type="submit" value="MOSTRAR">
+        </form>
+    </div>
+    <br><br><br>
+    <div>
+        <h3>...O usa tus propias peticiones!</h3>
+        <form action="mostraragendacustom" method="post">
+            (por favor, usa el formato correcto o se producirá un error) <br>
+            <textarea name="petitions" required></textarea><br>
+            Año y mes: <input type="month" name="monthyear" value="2019-05" required> <br>
+            Idioma de entrada: <select name="languagein" required>
+                    <option value="ESP">Español</option>
+                    <option value="CAT">Catalán</option>
+                    <option value="ENG">Inglés</option>
+                </select> <br>
+            Idioma de salida: <select name="language" required>
+                <option value="ESP">Español</option>
+                <option value="CAT">Catalán</option>
+                <option value="ENG">Inglés</option>
+            </select> <br>
+            Permitir colisiones de cerrado? <input type="checkbox" name="bool" checked> <br>
+            Franja horaria: De <input type="number" name="startHour" value="8" min="0" max="24" required> a <input
+                type="number" name="endHour" value="20" min="0" max="24" required> <br><br>
+            <input type="submit" value="MOSTRAR">
+        </form>
+    </div>
+</body>
+
+</html>
